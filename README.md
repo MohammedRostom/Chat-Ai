@@ -1,4 +1,4 @@
-<img src="https://github.com/MohammedRostom/Chat-Ai/blob/main/Assets/images/logoAi.webp" alt="logoApp" width="200" height="200"/>
+<img src="https://github.com/MohammedRostom/Chat-Ai/blob/main/screenShots/overview.png" alt="logoApp" width="300" height="100"/>
 "AI Chat"
 <br>
 "<b>Overview</b>
