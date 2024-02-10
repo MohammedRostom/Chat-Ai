@@ -1,13 +1,13 @@
-<img src="https://github.com/MohammedRostom/Chat-Ai/blob/main/screenShots/overview.png" alt="logoApp" width="300" height="100"/>
+<img src="https://github.com/MohammedRostom/Chat-Ai/blob/main/screenShots/overview.png" alt="logoApp" width="280" height="100"/>
 "AI Chat"
 <br>
 "<b>Overview</b>
 <h2>Getting Started</h2>
 <div style="display: flex; justify-content: space-evenly;">
 <img src="https://github.com/MohammedRostom/E_commerceApp-SOUQLY-/blob/main/ScreenShots/wellcome.png" alt="logoApp" width="250" height="550"/>
-    &nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;
 <img src="https://github.com/MohammedRostom/E_commerceApp-SOUQLY-/blob/main/ScreenShots/login.png" alt="logoApp" width="250" height="550"/>
-    &nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;
 <img src="https://github.com/MohammedRostom/E_commerceApp-SOUQLY-/blob/main/ScreenShots/sghinup.png" alt="logoApp" width="250" height="550"/>
 </div>
 
