@@ -1,3 +1,4 @@
 class Asset {
-  final String LogoImage = "Assets/images/logoAi.webp";
+  static final String Commpath = "Assets/images";
+  static final String LogoImage = "$Commpath/logoAi.webp";
 }

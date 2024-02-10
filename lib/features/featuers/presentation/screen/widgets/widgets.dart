@@ -1,7 +1,6 @@
 import 'package:dash_chat_2/dash_chat_2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../../../../core/utils/AssetsClass.dart';
 import '../../Cubits/Controller_Bloc_Methods/Controller_Bloc.dart';
 import '../../Cubits/MyCubit/my_cubit_cubit.dart';
@@ -31,7 +30,7 @@ DashChat ExpndedChat(BuildContext context) {
               child: CircleAvatar(
                 backgroundColor: Colors.black,
                 radius: 15,
-                backgroundImage: NetworkImage("${Asset.LogoImage}"),
+                backgroundImage: AssetImage("${Asset.LogoImage}"),
               ),
             );
           },
@@ -43,7 +42,8 @@ DashChat ExpndedChat(BuildContext context) {
       typingUsers: myController(context).typing,
       currentUser: myController(context).users[0],
       onSend: (ChatMessage message) {
-        myController(context).Postmsge(message);
+        myController(context)
+            .PostmsgeToAiAndGetResponeWithInsrtToMAsgesList(message);
       },
       messages: myController(context).MAsegs);
 }
@@ -97,7 +97,7 @@ class Background_logo extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.network("${Asset.LogoImage}"),
+              Image.asset("${Asset.LogoImage}"),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(

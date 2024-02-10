@@ -4,6 +4,7 @@ import 'package:dash_chat_2/dash_chat_2.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 import '../../../../../../core/Api_helper/api.dart';
+import '../../../../../core/utils/Constants.dart';
 part 'my_cubit_state.dart';
 
 class MyCubitCubit extends Cubit<MyCubitState> {
@@ -18,7 +19,7 @@ class MyCubitCubit extends Cubit<MyCubitState> {
   List<ChatMessage> MAsegs = [];
   List<ChatUser> typing = [];
 
-  Postmsge(ChatMessage Message) async {
+  PostmsgeToAiAndGetResponeWithInsrtToMAsgesList(ChatMessage Message) async {
     if (Message != "") {
       ChatMessage msg = ChatMessage(
         text: Message.text,
@@ -29,7 +30,7 @@ class MyCubitCubit extends Cubit<MyCubitState> {
       print(MAsegs.length);
       emit(insertedState());
 
-      var IaMestog = await Airespos(Message);
+      var IaMestog = await AiReponsMasge(Message);
       ChatMessage Aimsg = ChatMessage(
         user: users[1],
         createdAt: DateTime.now(),
@@ -43,12 +44,11 @@ class MyCubitCubit extends Cubit<MyCubitState> {
     // String msg = await ApiHelper().post(url: url, body: body, token: token);
   }
 
-  Future<dynamic> Airespos(ChatMessage aiMessage) async {
+  Future<dynamic> AiReponsMasge(ChatMessage aiMessage) async {
     typing.insert(0, users[1]);
     emit(Loading());
     var data = await ApiHelper().post(
-      url:
-          "https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=AIzaSyBKvmGrOSJn1cKmJyEZYrhd8M922JjeTVo",
+      url: "${Consts.endPoint}",
       body: jsonEncode({
         "contents": [
           {
@@ -60,9 +60,7 @@ class MyCubitCubit extends Cubit<MyCubitState> {
         ]
       }),
     );
-
     print(data.toString());
-
     return data;
   }
 }
