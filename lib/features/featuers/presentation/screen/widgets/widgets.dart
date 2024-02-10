@@ -67,6 +67,7 @@ AppBar Appbar() {
     centerTitle: true,
     leading: Icon(Icons.sort_rounded),
     title: Container(
+      padding: EdgeInsets.only(top: 7),
       width: 120,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
